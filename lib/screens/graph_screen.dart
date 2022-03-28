@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:graph/widgets/shape_painter.dart';
 
 class GraphScreen extends StatefulWidget {
-  const GraphScreen({Key? key}) : super(key: key);
+  final Map<String, dynamic> selectedBreath;
+  const GraphScreen(this.selectedBreath, {Key? key}) : super(key: key);
 
   @override
   State<GraphScreen> createState() => _GraphScreenState();
@@ -13,10 +14,9 @@ class _GraphScreenState extends State<GraphScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          padding: EdgeInsets.all(16.0),
+        child: SizedBox(
           child: CustomPaint(
-            painter: ShapePainter(),
+            painter: ShapePainter(widget.selectedBreath['flow']),
             child: Container(),
           ),
         ),

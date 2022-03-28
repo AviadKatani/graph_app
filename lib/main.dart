@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:graph/screens/choose_breath_screen.dart';
 import 'package:graph/screens/graph_screen.dart';
 
 void main() {
@@ -11,8 +12,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const GraphScreen(),
+    return const MaterialApp(
+      home: ChooseBreathScreen(),
     );
   }
 }
