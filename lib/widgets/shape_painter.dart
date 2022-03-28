@@ -5,6 +5,7 @@ class ShapePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     canvas.translate(0.0, size.height / 2);
+    canvas.drawColor(Colors.grey.shade900, BlendMode.exclusion);
     final paint = new Paint()
       ..color = Colors.purple
       ..strokeWidth = 1;
